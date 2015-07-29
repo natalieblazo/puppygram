@@ -2,4 +2,16 @@
   width: 75px;
 }
 
+body {
+	font-family: "Roboto", sans-serif;
+	background-color: #fffde7;
+}
 
+h1 {
+	font-family: "Oleo Script", script;
+	font-size: 20pt;
+}
+
+.subheader {
+	font-family: "Roboto", sans-serif;
+}
