@@ -1,18 +1,15 @@
 /* Puppygram .... something or another.
-- navbar
+- top-bar
 - more puppies
 - proper font
 - gridded puppies
 - color scheme */
 
-$(document).ready(function(){
-	   $(window).bind('scroll', function() {
-	   var navHeight = $( window ).height() - 20;
-			 if ($(window).scrollTop() > navHeight) {
-				 $('nav').addClass('fixed');
-			 }
-			 else {
-				 $('nav').removeClass('fixed');
-			 }
-		});
-	});
+var offset = -10; // some offset value for which when the header becomes hidden
+jQuery(window).scroll(function() { //also an option: jQuery .on('scroll') method
+  if(jQuery('#fixed_bar').is(':visible') && jQuery(window).scrollTop() < offset) {
+    jQuery('#fixed_bar').fadeOut(20);
+  } else if(!jQuery('#fixed_bar').is(':visible') && jQuery(window).scrollTop() > offset) {
+    jQuery('#fixed_bar').fadeIn(20);
+  }    
+});

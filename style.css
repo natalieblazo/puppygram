@@ -12,6 +12,15 @@ h1 {
 	font-size: 20pt;
 }
 
-.subheader {
-	font-family: "Roboto", sans-serif;
+#pug-img{
+	height: 303px;
+	width: 303px;
+}
+
+#fixed_bar {
+  width: 85.3%;
+  position: fixed;
+  z-index: 100; //exceed z-index of other elements on the page
+  display: none;
+  top: 0px;
 }
